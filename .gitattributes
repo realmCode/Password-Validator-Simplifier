@@ -1,0 +1,2 @@
+learning_json/*.trie filter=lfs diff=lfs merge=lfs -text
+learning_json/*word_freq.json filter=lfs diff=lfs merge=lfs -text
