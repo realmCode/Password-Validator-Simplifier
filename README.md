@@ -11,4 +11,4 @@ marisa_trie, re
 
 
 If Any issue:
-  contact: http://wa.me/+919974705021
+  contact: https://wa.me/+919974705021
