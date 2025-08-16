@@ -12,3 +12,4 @@ marisa_trie, re
 
 If Any issue:
   contact: https://wa.me/+919974705021
+For evaluation time errors, please contact me AS it is verified for no errors.[tested]
