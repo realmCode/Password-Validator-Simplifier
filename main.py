@@ -204,7 +204,7 @@ def _has_long_repeat(pw: str, max_run: int) -> bool:
 
 # ----------------------- main predicate -----------------------
 
-def is_humanlike_and_strong(pw: str, model: HumanPwModel, explain: bool = False):
+def is_valid_password(pw: str, model: HumanPwModel, explain: bool = False):
     reasons = []
 
     if not (model.min_len <= len(pw) <= model.max_len):
@@ -250,6 +250,8 @@ if __name__ == "__main__":
     TRIE_PATH     = "learning_json/word_logp.trie"               # mmap, <1s open
 
     # choose one:
+    # fastest inferences
+    # https://github.com/realmCode/Password-Validator-Simplifier
     use_trie = True  # set True after you build the trie
 
     if use_trie:
@@ -269,7 +271,7 @@ if __name__ == "__main__":
     failed = []
     succeed = []
     for pw in tests:
-        ok, why = is_humanlike_and_strong(pw, model, explain=True)
+        ok, why = is_valid_password(pw, model, explain=True)
         if ok:
             succeed.append(pw)
         else:

@@ -284,7 +284,7 @@ def _has_long_repeat(pw: str, max_run: int) -> bool:
 # ----------------------- main predicate -----------------------
 
 
-def is_humanlike_and_strong(pw: str, model: HumanPwModel, explain: bool = False):
+def is_valid_password(pw: str, model: HumanPwModel, explain: bool = False):
     reasons = []  # accumulate human-readable reasons for accept/reject
 
     if not (model.min_len <= len(pw) <= model.max_len):  # length policy gate
@@ -392,7 +392,7 @@ if __name__ == "__main__":
     succeed = []  # collect those that pass
 
     for pw in tests:  # iterate sample passwords
-        ok, why = is_humanlike_and_strong(
+        ok, why = is_valid_password(
             pw, model, explain=True
         )  # evaluate with explanations
         if ok:
