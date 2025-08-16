@@ -1,10 +1,20 @@
-# human_pw_detector_fast.py
+# refer the github repository for json files
+# https://github.com/realmCode/Password-Validator-Simplifier in learning_json folder
+# due to late time if i fail to upload json i will add readme to new json files link
+
+
+
+
+
 import json, math, re, struct  # stdlib: JSON IO, math ops, regex, binary packing/unpacking
 from dataclasses import dataclass  # dataclass for a clean model container
 
 try:
     import marisa_trie  # optional ultra-fast mmap'ed trie for word lookup
+    # pip install marisa_trie
 except Exception:
+    print("use this  pip install marisa_trie")
+    exit()
     marisa_trie = None  # if unavailable, we fall back to plain JSON dict backend
 
 # ----------------------- tokenization (matches trainer) -----------------------
