@@ -8,3 +8,7 @@ keep  use_trie = True in file
 
 Requirements:
 marisa_trie, re
+
+
+If Any issue:
+  contact: wa.m/+919974705021
