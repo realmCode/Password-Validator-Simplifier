@@ -1,6 +1,6 @@
 # NOTE FOR PROJECT EVALUATOR
 
-the files necessary to run the model are stored at folder learning_json/
+the files necessary to run the model are stored at folder __learning_json/word_logp.trie__
 DO NOT use learned_word_freq.json, use word_logp.trie instead
 
 EVALUATE USING THE learning_json/word_logp.trie file, 
